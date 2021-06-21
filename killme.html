@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Profile</title>
+		<!<link rel="stylesheet" href="mytest.css">
+	</head>
+	
+	<body style="background-color:#FFFFF4">
+		<div id="top" style="text-align:center">
+			<caption><h1><b>MOYU PROFILE</b></h1></caption>
+			<h3><b>HELLO! WELCOME TO MY PROFILE!<b></h3>
+		</div>
+		
+		<div align="center">
+			<ul id="area1" style="width:80%;">
+				<li><a href="#about">ALL ABOUT ME</a></li>
+				<li><a href="#fam">FAMILY</a></li>
+				<li><a href="#com">COMMENT</a></li>
+			</ul>
+		</div>
+		
+		<div id="area2">
+			<table border="1" style="width:80%;" align="center">
+				<thead style="background-color:#FFED97">
+					<tr>
+						<th>照片</th>
+						<th>名稱</th>
+						<th>說明</th>
+					</tr>
+					<tr>
+						<caption><th style="background-color:#FFF4C1" id="about" colspan="4">ALL ABOUT ME</th></caption>
+					</tr>
+				</thead>
+			
+				<tbody style="background-color:	#FFFFF4">
+					<tr>
+						<td>
+							<img src="images/study.jpg"width="200" height="100" style="display:block; margin:auto;">
+						</td>
+						<td align='center' valign="middle">STUDY</td>
+						<td>
+							<ul>
+								<li>NCU</li>
+								<li>HTML、C、JAVA</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="images/trumpet.jpg"width="200" height="150" style="display:block; margin:auto;">
+						</td>
+						<td align='center' valign="middle">HOBBY</td>
+						<td>
+							<ul>
+								<li>TRUMPET</li>
+								<li>Reading novels</li>
+								<li>MOVIE(I am a big fan of marvel)</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			
+		
+				<thead style="background-color:#FFED97">
+					<tr>
+						<caption><th style="background-color:#FFF4C1" id="fam" colspan="4">FAMILY</th></caption>
+					</tr>
+				</thead>
+			
+				<tbody style="background-color:	#FFFFF4">
+					<tr>
+						<td>
+							<img src="images/parent.jpg" width="200" height="100" style="display:block; margin:auto;">
+						</td>
+						<td align='center' valign="middle">父母</td>
+						<td>
+							<ul>
+								<li>爸爸+媽媽</li>
+								<li>溫柔可親</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="images/sister.png"width="200" height="200" style="display:block; margin:auto;">
+						</td>
+						<td align='center' valign="middle">姊姊</td>
+						<td>
+							<ul>
+								<li>經常使喚我</li>
+								<li>喜歡運動</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="images/bang.jpg" width="200" height="150" style="display:block; margin:auto;">
+						</td>
+						<td align='center' valign="middle">我</td>
+						<td>
+							<ul>
+								<li>就是我</li>
+								<li>一個期末爆炸的大學生</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+
+	        </table>
+		</div>
+		
+		<br>
+		<br><hr>
+		<br>
+		
+		<div  style="text-align:center">
+			
+			<label>想對我說的話:</label>
+			<input id="commit" type="text" name="commit"  placeholder="請輸入一句想對我說的話吧" value=""/>
+			<input id="btn" type="button" value="submit"/>
+			
+			<table border="1" style="width:80%;" align="center">
+
+				<thead style="background-color:#FFED97">
+					<tr>
+						<caption><th style="background-color:#FFF4C1" id="com" colspan="4">COMMENT</th></caption>
+					</tr>
+				</thead>
+			
+				<tbody style="background-color:	#FFFFF4">
+					<tr>
+						<td colspan="4">
+							<p id="result2"></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div>
+			<p><a href="#top">GO BACK</a></p>
+		</div>
+		
+		
+		<style>
+			#area1{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #FFE153;
+			}
+			/*css(1) bar的大小顏色設定*/
+
+			#area2{
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			
+
+			li a{
+				float: left;
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 10px 14px;
+				text-decoration: none;
+			}
+
+			p a{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #FFE153;
+			}
+			li a:hover{
+				transform: scale(1,2);
+				background-color: gray;
+				color: white;	
+			}
+
+			p a:hover{
+				background-color: gray;
+				color: white;	
+			}
+
+			/*css(2) 反白、放大效果*/
+
+			li a:active,
+			#about:active ~ li a[href="#about"],
+			#fam:active ~ li a[href="#fam"],
+			#com:active ~ li a[href="#com"] {
+			background-color: #fff;
+			color: #000;
+			}
+
+			p a:active,
+			#top:active ~ p a[href="#top"], {
+			background-color: #fff;
+			color: #000;
+			}
+			/*css(3) 有一個選單可以去跳轉到想要的區塊，以及有一個go back可以跳轉到最上面*/
+			
+			input[type=text]{
+				width: 300px;
+				margin-bottom: 40px;
+				background-color: white;
+				color: black;
+			}
+
+			input[type=button]{
+				background-color: #ACD6FF;
+				color: black;
+			}
+			/*css(4) 欄位和按扭的大小顏色設定*/
+		</style>
+		
+		
+		<script>
+			document.getElementById("btn").onclick = function(){
+			
+				var incommit = document.getElementById("commit").value;
+				document.getElementById("result2").innerHTML = incommit;
+				
+			}
+		</script>
+	</body>
+</html>
